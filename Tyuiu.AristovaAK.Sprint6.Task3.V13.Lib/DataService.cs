@@ -5,23 +5,25 @@ namespace Tyuiu.AristovaAK.Sprint6.Task3.V13.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int[,] result = (int[,])matrix.Clone();
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+            int[,] result = matrix;
 
-            for (int i = 0; i < 4; i++)
+
+            int[] secondCol = new int[rows];
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < 4 - i; j++)
-                {
-                    if (result[j, 1] > result[j + 1, 1])
-                    {
-                        for (int k = 0; k < 5; k++)
-                        {
-                            int temp = result[j, k];
-                            result[j, k] = result[j + 1, k];
-                            result[j + 1, k] = temp;
-                        }
-                    }
-                }
+                secondCol[i] = matrix[i, 1];
             }
+
+            Array.Sort(secondCol);
+
+
+            for (int j = 0; j < rows; j++)
+            {
+                result[j, 1] = secondCol[j];
+            }
+
 
             return result;
         }
