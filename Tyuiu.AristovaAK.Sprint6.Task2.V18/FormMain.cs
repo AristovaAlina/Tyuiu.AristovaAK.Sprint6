@@ -55,7 +55,7 @@ namespace Tyuiu.AristovaAK.Sprint6.Task1.V6
 
         private void buttonResult_AAK_MouseLeave(object sender, EventArgs e)
         {
-            buttonResult_AAK.BackColor = Color.SeaShell;
+            buttonResult_AAK.BackColor = Color.SeaShell; 
         }
 
         private void buttonResult_AAK_MouseDown(object sender, MouseEventArgs e)

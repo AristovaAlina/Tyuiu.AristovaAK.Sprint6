@@ -16,6 +16,6 @@ namespace Tyuiu.AristovaAK.Sprint6.Task2.V18.Lib
             }
 
             return res;
-        }
+        } 
     }
 }
