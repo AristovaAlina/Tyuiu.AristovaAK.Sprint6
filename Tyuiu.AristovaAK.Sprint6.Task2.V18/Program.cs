@@ -1,3 +1,5 @@
+using Tyuiu.AristovaAK.Sprint6.Task1.V6;
+
 namespace Tyuiu.AristovaAK.Sprint6.Task2.V18
 {
     internal static class Program
