@@ -11,13 +11,13 @@ namespace Tyuiu.AristovaAK.Sprint6.Task6.V7.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] words = line.Split(' ');
+                    string[] words = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                     if (words.Length >= 3)
                     {
                         resSrt += words[2] + " ";
                     }
                 }
-                return resSrt;
+                return resSrt.TrimEnd();
             }
         }
     }
